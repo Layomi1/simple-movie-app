@@ -1,10 +1,9 @@
 #CineStream 
 A simpe movie search app built with ***Vite React **** and OMDB API****
 
-#Features
 ## 📦 Installation & Setup
 
-###  Clone the Repository  \
+###  Clone the Repository  
 git clone https://github.com/layomi1/cinestream.git
 cd cinestream
 
