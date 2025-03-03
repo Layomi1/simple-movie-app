@@ -48,7 +48,7 @@ function App() {
           <ul
             className={`${
               isMenuOpen ? "block" : "hidden"
-            } min-w-[330px]  absolute top-40 mx-6  z-10 left-0 md:relative md:top-0 md:left-0  md:flex gap-12 items-center bg-black md: black md:bg-white py-4 md:px-6 md:bg-opacity-10 md:rounded-3xl `}
+            } min-w-[330px]  absolute top-40 mx-6 z-10 left-0 md:relative md:top-0 md:left-0  md:flex gap-12 items-center bg-black md: black md:bg-white py-4 md:px-6 md:bg-opacity-10 md:rounded-3xl`}
           >
             <li className="px-4 text-center hover:bg-black  hover:rounded-168px] hover:py-2 md:hover:px-6 cursor-pointer ">
               Home
@@ -97,12 +97,12 @@ function App() {
           <p className="text-gray-400 text-center text-sm md:text-base">
             Our young and expert admins prepare amazing trends
           </p>
-          <section className=" justify-center grid md:grid-cols-3 gap-4 py-5">
+          <section className="  grid md:grid-cols-3 gap-4 py-5">
             {movies && movies.length > 0 ? (
               movies.slice(0, 20).map((item) => (
                 <article
                   key={item.imdbID}
-                  className="mx-auto h-auto p-4 bg-white bg-opacity-15 max-w-[320px]"
+                  className=" max-w-[320px] h-auto p-4 bg-white bg-opacity-15 "
                 >
                   <figure className="">
                     <img src={item.Poster} alt={item.Title} />
@@ -123,7 +123,11 @@ function App() {
                 </article>
               ))
             ) : (
-              <h1>No movie matches your Search...!</h1>
+              <section className="flex items-center w-full text-center md:px-16 ">
+                <h1 className="text-3xl md:text-nowrap ">
+                  No movie matches your Search...!
+                </h1>
+              </section>
             )}
           </section>
         </section>
